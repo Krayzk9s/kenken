@@ -2,16 +2,30 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dp" 
     >
     <TableLayout 
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/PlayTable"
+        android:showDividers="middle"
+        android:padding="2dp"
+        android:gravity="center_horizontal"
         > 
     </TableLayout>
-     <TextView 
-		        android:layout_width="fill_parent"
-		        android:layout_height="fill_parent"
-		        android:text="@string/PlayMenu"
-		        android:textSize="20dp"/>
+     <LinearLayout
+      android:layout_height="wrap_content"
+      android:layout_width="wrap_content"
+      android:id="@+id/SelectTile"
+      android:orientation="horizontal"
+      android:showDividers="middle"
+      android:divider="@android:drawable/divider_horizontal_bright"
+      android:padding="10dp"
+      android:gravity="center_horizontal" 
+        >
+    </LinearLayout>
+    
+   
+    
 </LinearLayout>

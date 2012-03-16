@@ -15,11 +15,12 @@ public final class R {
         public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
-        public static final int AboutMenu=0x7f050003;
-        public static final int InstructionsMenu=0x7f050004;
-        public static final int OptionMenu=0x7f050002;
-        public static final int PlayMenu=0x7f050001;
+        public static final int AboutMenu=0x7f050004;
+        public static final int InstructionsMenu=0x7f050005;
+        public static final int OptionMenu=0x7f050003;
+        public static final int PlayMenu=0x7f050002;
         public static final int PlayTable=0x7f050000;
+        public static final int SelectTile=0x7f050001;
     }
     public static final class layout {
         public static final int main=0x7f030000;
