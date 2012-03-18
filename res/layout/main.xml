@@ -5,28 +5,21 @@
     android:orientation="vertical"
     android:padding="10dp" 
     >
-    <TableLayout 
-        android:layout_width="wrap_content"
+    <ListView 
+        android:id="@android:id/list"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1.0"
+        />"
+    <TextView
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/PlayTable"
-        android:showDividers="middle"
-        android:padding="2dp"
-        android:layout_gravity="center_horizontal"
-        android:background="#000000"
-        >"
-    </TableLayout>
-     <LinearLayout
-      android:layout_height="wrap_content"
-      android:layout_width="wrap_content"
-      android:id="@+id/SelectTile"
-      android:orientation="horizontal"
-      android:showDividers="middle"
-      android:divider="@android:drawable/divider_horizontal_bright"
-      android:layout_gravity="center_horizontal" 
-      android:background="#000000"
-        >
-    </LinearLayout>
-    
-   
-    
+        android:text="@string/Play"
+        />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Options"
+        />
 </LinearLayout>

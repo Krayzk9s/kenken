@@ -25,8 +25,9 @@ public class Game extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-        
+        setContentView(R.layout.game);
+        int level = this.getIntent().getExtras().getInt("Level");
+        Log.d("Level", level+"");
         //grab playtable from layout
         TableLayout table = (TableLayout) findViewById(R.id.PlayTable);
         
