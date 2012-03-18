@@ -5,22 +5,22 @@
 
     <item
         android:id="@+id/PlayMenu"
-        android:title="@string/PlayMenu"
+        android:title="@string/Play"
         android:showAsAction="ifRoom|withText"
         />
     <item
         android:id="@+id/OptionMenu"
-        android:title="@string/OptionMenu"
+        android:title="@string/Options"
         android:showAsAction="ifRoom|withText"
         />
     <item
         android:id="@+id/AboutMenu"
-        android:title="@string/AboutMenu"
+        android:title="@string/About"
         android:showAsAction="ifRoom|withText"
         />
     <item
         android:id="@+id/InstructionsMenu"
-        android:title="@string/InstructionsMenu"
+        android:title="@string/Instructions"
         android:showAsAction="ifRoom|withText"
         />
 </menu>

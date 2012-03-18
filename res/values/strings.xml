@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">kenken</string>
-    <string name="PlayMenu">Play Game</string>
-    <string name="OptionMenu">Options</string>
-    <string name="AboutMenu">About</string>
-    <string name="InstructionsMenu">Instructions</string>
+    <string name="Play">Play Game</string>
+    <string name="Options">Options</string>
+    <string name="About">About</string>
+    <string name="Instructions">Instructions</string>
 
 </resources>
