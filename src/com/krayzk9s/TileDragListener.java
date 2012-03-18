@@ -1,5 +1,6 @@
 package com.krayzk9s;
 
+import android.content.ClipData;
 import android.util.Log;
 import android.view.DragEvent;
 import android.view.View;
@@ -21,7 +22,11 @@ public class TileDragListener implements View.OnDragListener {
 		}
 		else if(dragAction == DragEvent.ACTION_DROP && containsDragable) {
 			dragView.setVisibility(View.VISIBLE);
-			Log.d("drag", "dragging" + square.position);
+			ClipData data = event.getClipData();
+			ClipData.Item dataitem = data.getItemAt(0);
+			String strdata = (String) dataitem.coerceToText(null);
+			square.setNumber(Integer.parseInt(strdata));
+			Log.d("drag", strdata + "dragging" + square.position);
 		}
 		// TODO Auto-generated method stub
 		return true;

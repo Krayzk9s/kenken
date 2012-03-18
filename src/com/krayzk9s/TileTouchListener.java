@@ -11,7 +11,8 @@ public class TileTouchListener implements View.OnTouchListener {
 	
 	public boolean onTouch(View v, MotionEvent event) {
 		Log.d("touch", "touching");
-	    ClipData dragData = ClipData.newPlainText("", "");
+		Tile t = (Tile)v;
+	    ClipData dragData = ClipData.newPlainText("tilenumber", ""+t.number);
 	    DragShadowBuilder myShadow = new View.DragShadowBuilder(v);
 	    v.startDrag(dragData, myShadow, v, 0);
 	    return true;

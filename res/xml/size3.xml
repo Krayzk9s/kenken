@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<levels>
+	<level id="1">
+		<solution>123312231</solution>
+		<boxes>
+			<box>
+				<text>3+</text>
+				<squares>0,1</squares>
+			</box>
+			<box>
+				<text>3+</text>
+				<squares>2,5</squares>
+			</box>
+		</boxes>
+	</level>
+</levels>
