@@ -6,6 +6,9 @@ import java.util.Map;
 
 import org.xmlpull.v1.XmlPullParserException;
 
+import com.krayzk9s.classes.Square;
+import com.krayzk9s.classes.Tile;
+
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.res.XmlResourceParser;
@@ -20,13 +23,14 @@ import android.widget.TableRow;
 
 public class Game extends Activity {
 	
+	private int level;
 	private String sequence;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game);
-        int level = this.getIntent().getExtras().getInt("Level");
+        level = this.getIntent().getExtras().getInt("Level");
         Log.d("Level", level+"");
         //grab playtable from layout
         TableLayout table = (TableLayout) findViewById(R.id.PlayTable);
@@ -63,36 +67,49 @@ public class Game extends Activity {
     }
     
     private void loadLevel() {
-    	XmlResourceParser level = this.getResources().getXml(R.xml.size3);
+    	XmlResourceParser levelxml = this.getResources().getXml(R.xml.size3);
         Map<String,String> boxes = new HashMap<String,String>();
         try {
-			while(level.getEventType() != XmlResourceParser.END_DOCUMENT) {
-				if(level.getEventType() == XmlResourceParser.START_TAG) {
-					String s = level.getName();
-					if(s.equals("solution")){
-						level.next();
-						sequence = level.getText();
-					}
-					if(s.equals("boxes")) {
-						level.next();
-						Log.d("",""+level.getName());
-						while(level.getName().equals("box")) {
-							level.next();
-							level.next();
-							String key = level.getText();
-							level.next();
-							level.next();
-							level.next();
-							String value = level.getText();
-							level.next();
-							level.next();
-							level.next();
-							boxes.put(key, value);
-							Log.d("",""+key+value);
+			while(levelxml.getEventType() != XmlResourceParser.END_DOCUMENT) {
+				if(levelxml.getEventType() == XmlResourceParser.START_TAG) {
+					Log.d("yes",levelxml.getName());
+					if(levelxml.getName().equals("level") && levelxml.getIdAttribute().equals(level + "")) {
+						Log.d("here","here");
+						while(!levelxml.getName().equals("level") || levelxml.getEventType() != XmlResourceParser.END_TAG) {
+							String s = levelxml.getName();
+							Log.d("no",s);
+							if(levelxml.getEventType() != XmlResourceParser.END_TAG) {
+								if(s.equals("solution")) {
+									levelxml.next();
+									sequence = levelxml.getText();
+									Log.d("sequence", sequence);
+								}
+								else if(s.equals("boxes")) {						
+									while(!levelxml.getName().equals("boxes") || levelxml.getEventType() != XmlResourceParser.END_TAG ) {
+										String key = "";
+										String value = "";
+										Log.d("boxes", levelxml.getName());
+										if(levelxml.getEventType() != XmlResourceParser.END_TAG) {
+											if(levelxml.getName().equals("text")){
+												levelxml.next();
+												key = levelxml.getText();
+											}
+											else if(levelxml.getName().equals("squares")) {
+												levelxml.next();
+												value = levelxml.getText();
+											}
+										}
+										boxes.put(key, value);
+										Log.d("",""+key+value);
+										levelxml.next();
+									}									
+								}
+							}
+							levelxml.next();			
 						}
 					}
 				}
-				level.next();
+				levelxml.next();
 			}
 		} catch (XmlPullParserException e) {
 			Log.d("sequence","failPull");

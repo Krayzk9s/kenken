@@ -1,4 +1,4 @@
-package com.krayzk9s;
+package com.krayzk9s.classes;
 
 import java.util.ArrayList;
 
@@ -7,6 +7,8 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.widget.ImageView;
+
+import com.krayzk9s.R;
 
 public class Square extends ImageView {
 	private int number;

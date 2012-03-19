@@ -1,4 +1,4 @@
-package com.krayzk9s;
+package com.krayzk9s.classes;
 
 import android.content.ClipData;
 import android.util.Log;

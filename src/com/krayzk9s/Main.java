@@ -27,6 +27,9 @@ public class Main extends ListActivity {
 		    	intent.putExtra("Level", 1);
 		    	startActivity(intent);		    	
 		    }
+		    else if(itemText.equals("Quit")) {
+		    	this.finish();
+		    }
 		    Log.d("Clicked:", itemText);
 		}
 }

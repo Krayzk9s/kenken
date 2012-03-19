@@ -1,4 +1,4 @@
-package com.krayzk9s;
+package com.krayzk9s.classes;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -7,6 +7,8 @@ import android.graphics.Typeface;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.krayzk9s.R;
 
 public class Tile extends ImageView {
 	public int number;

@@ -13,4 +13,17 @@
 			</box>
 		</boxes>
 	</level>
+	<level id="2">
+		<solution>333222111</solution>
+		<boxes>
+			<box>
+				<text>3+</text>
+				<squares>0,1</squares>
+			</box>
+			<box>
+				<text>3+</text>
+				<squares>2,5</squares>
+			</box>
+		</boxes>
+	</level>
 </levels>
