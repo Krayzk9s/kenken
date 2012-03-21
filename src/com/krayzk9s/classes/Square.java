@@ -6,6 +6,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Typeface;
+import android.util.Log;
 import android.widget.ImageView;
 
 import com.krayzk9s.R;
@@ -15,12 +16,14 @@ public class Square extends ImageView {
 	private ArrayList<Boolean> allowedNumbers;
 	public int position;
 	public int truenumber;
+	public String tag;
 	
 	public Square(Context context, int _position) {
 		super(context);
 		setOnDragListener(new TileDragListener());
     	setPadding(1, 1, 1, 1);
     	setImageResource(R.drawable.box);
+    	this.invalidate();
     	position = _position;
 	}
 	@Override
@@ -31,7 +34,8 @@ public class Square extends ImageView {
         paint.setTextSize(20);
         paint.setTypeface(Typeface.MONOSPACE);
         paint.setAntiAlias(true);
-		canvas.drawText("" + truenumber, 2, 18, paint);
+        Log.d("tag",""+tag);
+		canvas.drawText(tag, 2, 18, paint);
 		if(number != 0) {
 			paint.setARGB(255, 0, 0, 0);
 	        paint.setTextSize(60);

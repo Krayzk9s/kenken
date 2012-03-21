@@ -8,8 +8,16 @@
 				<squares>0,1</squares>
 			</box>
 			<box>
-				<text>3+</text>
+				<text>5+</text>
 				<squares>2,5</squares>
+			</box>
+			<box>
+				<text>6x</text>
+				<squares>3,6</squares>
+			</box>
+			<box>
+				<text>3x</text>
+				<squares>4,7,8</squares>
 			</box>
 		</boxes>
 	</level>

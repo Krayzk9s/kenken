@@ -1,5 +1,7 @@
 package com.krayzk9s;
 
+import com.bugsense.trace.BugSenseHandler;
+
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,7 +17,8 @@ public class Main extends ListActivity {
 		@Override
 		public void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
-	        this.setListAdapter(new ArrayAdapter<String>(this, R.layout.menu_item, MENU));
+			BugSenseHandler.setup(this, "c670ebce");
+			this.setListAdapter(new ArrayAdapter<String>(this, R.layout.menu_item, MENU));
 		}
 		@Override
 		protected void onListItemClick(ListView l, View v, int position, long id)
