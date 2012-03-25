@@ -21,6 +21,7 @@ public class Square extends ImageView {
 	public Square(Context context, int _position) {
 		super(context);
 		setOnDragListener(new TileDragListener());
+		setOnTouchListener(new SquareTouchListener());
     	setPadding(1, 1, 1, 1);
     	setImageResource(R.drawable.box);
     	this.invalidate();
@@ -30,12 +31,12 @@ public class Square extends ImageView {
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
 		Paint paint = new Paint(Paint.LINEAR_TEXT_FLAG);
-		paint.setARGB(255, 255, 0, 0);
+		paint.setARGB(255, 0, 0, 0);
         paint.setTextSize(20);
         paint.setTypeface(Typeface.MONOSPACE);
         paint.setAntiAlias(true);
         Log.d("tag",""+tag);
-		canvas.drawText(tag, 2, 18, paint);
+		canvas.drawText(tag, 4, 20, paint);
 		if(number != 0) {
 			paint.setARGB(255, 0, 0, 0);
 	        paint.setTextSize(60);

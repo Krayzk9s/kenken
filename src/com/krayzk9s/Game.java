@@ -21,6 +21,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
+import android.widget.Toast;
 
 import com.krayzk9s.classes.Square;
 import com.krayzk9s.classes.Tile;
@@ -31,7 +32,7 @@ public class Game extends Activity {
 	private String sequence;
 	private String[] tags;
 	private Map<String,String> boxes;
-	private ImageView[] squares;
+	private Square[] squares;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -168,4 +169,16 @@ public class Game extends Activity {
         inflater.inflate(R.layout.mainmenu, menu);
         return true;
     }
+	public void checkVictory() {
+		boolean correct = true;
+		for(int i = 0; i < squares.length; i++) {
+			if(squares[i].truenumber != squares[i].getNumber()) {
+				correct = false;
+			}
+		}
+		if(correct) {
+			Toast toast = Toast.makeText(this, "You Win!", Toast.LENGTH_SHORT);
+			toast.show();
+		}
+	}
 }
