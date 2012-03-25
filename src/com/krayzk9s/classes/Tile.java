@@ -16,8 +16,6 @@ public class Tile extends ImageView {
 	public Tile(Context context, int _number) {
 		super(context);
 		setOnTouchListener(new TileTouchListener());
-		this.setMinimumHeight(20);
-		this.setMinimumWidth(20);
 		setPadding(1, 2, 1, 2);
     	setImageResource(R.drawable.box);
     	number = _number;
