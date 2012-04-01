@@ -1,37 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?>
-<levels>
-	<level id="1">
-		<solution>123312231</solution>
-		<boxes>
-			<box>
-				<text>3+</text>
-				<squares>0,1</squares>
-			</box>
-			<box>
-				<text>5+</text>
-				<squares>2,5</squares>
-			</box>
-			<box>
-				<text>6x</text>
-				<squares>3,6</squares>
-			</box>
-			<box>
-				<text>3x</text>
-				<squares>4,7,8</squares>
-			</box>
-		</boxes>
-	</level>
-	<level id="2">
-		<solution>333222111</solution>
-		<boxes>
-			<box>
-				<text>3+</text>
-				<squares>0,1</squares>
-			</box>
-			<box>
-				<text>3+</text>
-				<squares>2,5</squares>
-			</box>
-		</boxes>
-	</level>
+<levels> 
+<level id="0">
+<solution>213321132</solution>
+<boxes>
+<box>
+<text>2=</text>
+<squares>0,</squares>
+</box>
+<box>
+<text>2-</text>
+<squares>1,2,</squares>
+</box>
+<box>
+<text>6x</text>
+<squares>4,3,</squares>
+</box>
+<box>
+<text>1-</text>
+<squares>5,8,</squares>
+</box>
+<box>
+<text>3x</text>
+<squares>7,6,</squares>
+</box>
+</boxes>
+</level>
+<level id="1">
+<solution>321132213</solution>
+<boxes>
+<box>
+<text>3=</text>
+<squares>0,</squares>
+</box>
+<box>
+<text>6x</text>
+<squares>4,1,</squares>
+</box>
+<box>
+<text>2x</text>
+<squares>2,5,</squares>
+</box>
+<box>
+<text>3+</text>
+<squares>6,3,</squares>
+</box>
+<box>
+<text>3x</text>
+<squares>8,7,</squares>
+</box>
+</boxes>
+</level>
+<level id="2">
+<solution>132213321</solution>
+<boxes>
+<box>
+<text>1=</text>
+<squares>0,</squares>
+</box>
+<box>
+<text>3x</text>
+<squares>1,4,</squares>
+</box>
+<box>
+<text>6x</text>
+<squares>5,2,</squares>
+</box>
+<box>
+<text>2=</text>
+<squares>3,</squares>
+</box>
+<box>
+<text>6x</text>
+<squares>6,7,</squares>
+</box>
+<box>
+<text>1=</text>
+<squares>8,</squares>
+</box>
+</boxes>
+</level>
 </levels>

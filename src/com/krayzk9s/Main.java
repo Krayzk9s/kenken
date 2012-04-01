@@ -12,6 +12,8 @@ import android.widget.ListView;
 
 public class Main extends ListActivity {
 	
+	private int level = 0;
+	
 	static final String[] MENU = new String[] {"Play Game", "Options", "About", "Instructions", "Quit" };
 		
 		@Override
@@ -27,12 +29,22 @@ public class Main extends ListActivity {
 		    String itemText = getListView().getItemAtPosition(position).toString();
 		    if(itemText.equals("Play Game")) {
 		    	Intent intent = new Intent(this, Game.class);
-		    	intent.putExtra("Level", 1);
-		    	startActivity(intent);		    	
+		    	intent.putExtra("Level", level);
+		    	this.startActivityForResult(intent, level);		    	
 		    }
 		    else if(itemText.equals("Quit")) {
 		    	this.finish();
 		    }
 		    Log.d("Clicked:", itemText);
 		}
+		@Override
+		protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+			super.onActivityResult(requestCode, resultCode, data);
+			level++;
+			Intent intent = new Intent(this, Game.class);
+	    	intent.putExtra("Level", level);
+	    	this.startActivityForResult(intent, level);	
+			Log.d("level","complete!");
+		}
+		
 }

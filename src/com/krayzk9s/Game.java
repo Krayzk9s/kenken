@@ -81,6 +81,7 @@ public class Game extends Activity {
 				square.invalidate();
 			}
 		colorindex++;
+		if (colorindex >= colors.length) colorindex = 0;
 		}
         //create tiles
         LinearLayout tiles = (LinearLayout) findViewById(R.id.SelectTile);
@@ -96,7 +97,7 @@ public class Game extends Activity {
     }
     
     private void loadLevel() {
-    	XmlResourceParser levelxml = this.getResources().getXml(R.xml.size3);
+    	XmlResourceParser levelxml = this.getResources().getXml(R.xml.size4);
         boxes = new HashMap<String,String>();
         try {
 			while(levelxml.getEventType() != XmlResourceParser.END_DOCUMENT) {
@@ -179,6 +180,7 @@ public class Game extends Activity {
 		if(correct) {
 			Toast toast = Toast.makeText(this, "You Win!", Toast.LENGTH_SHORT);
 			toast.show();
+			this.finish();
 		}
 	}
 }

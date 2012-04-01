@@ -27,7 +27,6 @@ public class TileDragListener implements View.OnDragListener {
 				Square squareDrag = (Square) dragView;
 				squareDrag.setNumber(square.getNumber());
 			}
-			dragView.setVisibility(View.VISIBLE);
 			ClipData data = event.getClipData();
 			ClipData.Item dataitem = data.getItemAt(0);
 			String strdata = (String) dataitem.coerceToText(null);
